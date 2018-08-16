@@ -1,0 +1,17 @@
+  body {
+    background-color: rgb(241,191,93);
+    text-align: center;
+  }
+
+  h1 {
+    color: rgb(199,61,14);
+  }
+
+  button {
+    background-color: rgb(44,93,137)
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  } 
+  
