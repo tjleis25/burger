@@ -4,13 +4,33 @@
 
 <h1>Eat-Da-Burger!</h1>
 
-<form class="create-form">
+{{!-- content goes here --}}
+<div id="added">
+  {{#each burgers}}
+    {{#unless this.devoured}}
+    <p>{{this.id}}. {{this.burger_name}}
+    <button data-id="{{this.id}}" class="devourBtn">Devour It!</button></p>
+    {{/unless}}
+  {{/each}}
+</div>
+
+<div id="devoured">
+  {{#each burgers}}
+    {{#if this.devoured}}
+      <p>{{this.id}}. {{this.burger_name}}>
+    {{/if}}
+  {{/each}}
+</div>
+
+
+<form class="create-form" action="/" method="POST">
 
   <div class="form-group">
-    <input type="text" id="ca" name="name">
+    <label for="newBurger"></label>
+    <input type="text" id="newBurger" name="burger_name">
   </div>
 
-  <button class="submit">Submit</button>
+  <button class="submit" class="btn btn-primary">Submit</button>
 
   <p>Enter a burger you want to eat and click the "submit" button.</p>
 </form>
